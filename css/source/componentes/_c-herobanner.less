@@ -1,0 +1,109 @@
+.c-herobanner{
+	position: relative;
+	&__contents{
+		width: 100%;
+		max-width: 1920px;
+		overflow: hidden;
+		margin: auto;
+		display: block;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+	}
+	&__contents-item{
+		display: inline-block;
+		width: 100%;
+	}
+	&__image{
+		display: flex;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		img{
+			display: inline-flex;
+			width: 100%;
+			object-fit: cover;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&--a{
+		background-color: @gris-6;
+		.c-herobanner__controlui{
+			width: 100%;
+			display: block;
+			.o-container{
+				position: relative;
+			}
+			&-contents{
+				padding: 20px;
+				position: absolute;
+				display: inline-block;
+				right: 0;
+				bottom: 30px;
+				z-index: 2;
+			}
+		}
+		.c-herobanner__contents-item{
+			.c-herobanner__image{
+				z-index: 1;
+			}
+			.o-container{
+				padding-top: 100px;
+				padding-bottom: 100px;
+				position: relative;
+				z-index: 2;
+				width: 100%;
+			}
+		}
+	}
+	&--c{
+		background-color: @gris-6;
+		text-align: center;
+		.c-herobanner__contents-item{
+			.c-herobanner__image{
+				z-index: 1;
+			}
+			.o-container{
+				padding-top: 100px;
+				padding-bottom: 100px;
+				position: relative;
+				padding-left: 0;
+				padding-right: 0;
+				z-index: 2;
+				width: 100%;
+			}
+		}
+	}
+	&--b{
+		background-color: @negro;
+		color: @blanco;
+		margin-bottom: 30px;
+		strong, span, p, h1, h2, h3, h4, h5, h6{
+			font-size: 28px;
+			font-weight: @regular;
+			margin: 10px 32px;
+		}
+		.o-btn{
+			text-align: center;
+			margin: 0 32px;
+			display: inline-block;
+			border: 1px solid @verde-2;
+			min-width: 216px
+		}
+		.o-container{
+			display: flex;
+			align-items: center;
+			padding: 24px;
+		}
+		@media(max-width: @tablet-portrait){
+			.o-container{
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+			}
+		}
+	}
+}

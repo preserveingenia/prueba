@@ -1,0 +1,37 @@
+/**
+* Estructura con la Metodologia ITCSS
+* mas informacion: https://dev.to/carlillo/understanding-itcss-real-case-using-itcss-in-a-ghostcms-blog-1p9b
+*/
+
+// SETTINGS
+// Configuracion (Variables para el tema)
+@import "../configuracion/_variables";
+@import "../configuracion/_tipografia";
+
+// TOOLS
+// Herramientas (Funciones y mixins, solo es usado por el preprocesador)
+@import "../herramientas/_funciones";
+@import "../herramientas/_mixins";
+
+// GENERIC
+// Generico - Normaliza los estilos (Normalize, normaliza los estilos, mas info: https://necolas.github.io/normalize.css/)
+@import "../generico/_normalize";
+
+// ELEMENTS
+// Elementos - Estilos para etiquetas por ejemplo: h1, h2, p, li, etc..
+@import "../etiquetas/_etiquetas";
+
+// OBJECTS
+// Objetos
+@import "../objetos/_o-btn";
+@import "../objetos/_o-checkbox";
+@import "../objetos/_o-formularios";
+@import "../objetos/_o-grid";
+@import "../objetos/_o-lighbox";
+@import "../objetos/_o-radio";
+@import "../objetos/_o-select";
+@import "../objetos/_o-switch";
+
+// UTILITIES
+// Utilidades - Utilidades (Sobre escriben todos los estilos) (Metologia BEMIT)
+@import "../utilidades/_u-utilidades";

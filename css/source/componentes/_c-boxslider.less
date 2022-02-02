@@ -1,0 +1,122 @@
+.c-boxslider-item{
+	margin: 20px 0;
+	display: inline-block;
+	&--custom-alternate{
+		&:nth-child(even){
+			> div {
+				.c-boxslider-item__contents-textbox{
+					padding-left: 20%;
+					padding-right: 0;
+					@media(max-width: 1200px){
+						padding: 20px 0;
+					}
+				}
+				.c-boxslider-item__contents-controlui{
+					right: inherit;
+					left: -100%;
+					text-align: right;
+				}
+			}
+		}
+	}
+	&__contents{
+		align-items: center;
+		position: relative;
+		display: flex;
+		&-cta{
+			.o-btn{
+				min-width: 160px;
+				margin: 36px 0;
+			}
+		}
+		&-paragraph{
+			p{
+				font-size: 18px;
+				line-height: 28px;
+			}
+			> div{
+				@media(min-width: @tablet){
+					overflow: auto;
+					display: block;
+					height: 100px;
+					margin-bottom: 100px;
+				}
+				@media(min-width: 1200px){
+					height: initial;
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-image, &-text{
+			flex: 1 0 50%;
+			position: relative;
+		}
+		&-image{
+			@media(max-width: 1200px){
+				flex: 1 0 30%;
+			}
+		}
+		&-textbox-title{
+			overflow: hidden;
+			display: block;
+			max-height: 90px;
+			margin-bottom: 60px;
+		}
+		&-textbox{
+			padding-right: 20%;
+			h1, h2, h3, h4, h5, h6{
+				font-size: @font-size-h2;
+				font-weight: @medium;
+				line-height: 40px;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;  
+				overflow: hidden;
+				margin: 0;
+			}
+			&-title{
+				p{
+					font-weight: @light;
+					margin: 16px 0;
+					font-size: 28px;
+					line-height: 32px;
+				}
+			}
+			@media(max-width: 1200px){
+				padding: 20px 0;
+			}
+		}
+		&-text{
+			padding: 0 36px;
+			overflow: auto;
+		}
+		&-controlui{
+			padding: 36px;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			right: -100%;
+			text-align: left;
+			z-index: 1;
+		}
+	}
+	&--singlebox{
+		.c-boxslider-item__contents-textbox-title{
+			overflow: inherit;
+			max-height: initial;
+		}
+		.c-boxslider-item__contents-textbox{
+			padding-right: initial;
+			h1, h2, h3, h4, h5, h6{
+				font-size: @font-size-h2;
+				font-weight: @medium;
+				line-height: 40px;
+				display: -webkit-box;
+				-webkit-line-clamp: initial;
+				-webkit-box-orient: vertical;  
+				overflow: hidden;
+				margin: 0;
+			}
+		}
+	}
+}

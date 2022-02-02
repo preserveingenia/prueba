@@ -1,0 +1,81 @@
+.u-hidden {
+	display: none;
+}
+
+.u-visible {
+	display: block;
+}
+
+.u-float-left {
+	float: left;
+}
+
+.u-float-right {
+	float: right;
+}
+
+.u-clear-both {
+	clear: both;
+}
+
+.u-text-center {
+	text-align: center;
+}
+
+.u-text-left {
+	text-align: left;
+}
+
+.u-text-right {
+	text-align: right;
+}
+
+.u-input{
+	position: relative;
+	width: 100%;
+
+	[class^="icon-"],
+	[class*=" icon-"]{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: @negro;
+	}
+
+	&--icon-right{
+		[class^="icon-"],
+		[class*=" icon-"]{
+			right: 16px;
+		}
+
+		input{
+			&[type=text],
+			&[type=password],
+			&[type=email] {
+				padding-right: 40px;
+			}
+		}
+
+		select {
+			+ [class^="icon-"],
+			+ [class*=" icon-"]{
+				font-size: 12px;
+			}
+		}
+	}
+
+	&--icon-left{
+		[class^="icon-"],
+		[class*=" icon-"]{
+			left: 16px;
+		}
+
+		input{
+			&[type=text],
+			&[type=password],
+			&[type=email] {
+				padding-left: 40px;
+			}
+		}
+	}
+}

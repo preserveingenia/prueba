@@ -1,0 +1,44 @@
+.c-anuncio{
+	background: @negro;
+
+	.o-container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	p{
+		color: @blanco;
+		margin: 0;
+		font: @regular 15px/21px @tipografia-principal;
+		padding: 14px 0 10px 0;
+
+		a{
+			color: @verde-3;
+
+			&:hover{
+				color: @verde-2;
+				text-decoration: none;
+			}
+		}
+
+		span{
+			color: @blanco;
+			margin-left: 5px;
+			display: inline-block;
+			transform: translateY(2px);
+			transition: color 0.5s ease-in;
+
+			&:hover{
+				color: @verde-2;
+			}
+		}
+	}
+
+	&__separador{
+		transform: none !important;
+		font-weight: @thin;
+		display: inline-block;
+		padding: 0 10px 0 10px;
+	}
+}

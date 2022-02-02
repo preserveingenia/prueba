@@ -1,0 +1,77 @@
+.c-contact-form{
+	max-width: 1640px;
+	padding: 0 16px;
+	.page-title{
+		font-size: @font-size-h1;
+		font-weight: @bold;
+		margin-bottom: 24px;
+		padding: 0 8px;
+	}
+}
+#contact-form.form.contact{
+	.actions-toolbar{
+		padding: 0 15px;
+	}
+	.actions-toolbar .primary{
+		display: block;
+		width: 100%;
+	}
+	button.action{
+		background: @verde-2;
+		border-radius: 5px;
+		border: 1px solid @verde-2;
+		color: @blanco;
+		cursor: pointer;
+		display: inline-block;
+		font: @medium 15px/21px @tipografia-principal;
+		padding: 12.5px 15px;
+		transition: 0.5s all ease;
+		min-width: 125px;
+		width: 100%;
+		max-width: 950px;
+		
+	}
+	.legend{
+		margin: 0;
+		margin: 24px 8px;
+		padding: 34px 24px;
+		background-color: @gris-6;
+		width: calc(100% - 16px);
+		h1, h2, h3, h4, h5, h6{
+			margin-top: 0;
+		}
+		span{
+			font-size: @font-size-p;
+			font-weight: @regular;
+			line-height: 24px;
+			color: @negro;
+		}
+	}
+	.field{
+		width: 33.33%;
+		display: inline-block;
+		padding: 0 16px;
+		margin-bottom: 16px;
+		@media(max-width: @phablet){
+			width: 100%;
+		}
+	}
+	.field.note.no-label{
+		width: 100%;
+		margin-top: 64px;
+		font-size: @font-size-h4;
+		font-weight: @medium;
+		margin-bottom: 36px;
+	}
+	.field.comment{
+		width: 100%;
+		margin-top: 16px;
+		textarea{
+			background-color: @blanco;
+			border: 1px solid @negro;
+			height: 256px;
+			padding-left: 20px;
+			padding-top: 0;
+		}
+	}
+}

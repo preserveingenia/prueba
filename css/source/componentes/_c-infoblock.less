@@ -1,0 +1,65 @@
+.c-infoblock{
+	width: 100%;
+	display: flex;
+	margin: 70px 0;
+	justify-content: center;
+	img{
+		width: auto;
+		display: inline-block;
+		max-width: 100%;
+		font-size: 0;
+	}
+	.o-icon{
+		font-size: 45px;
+		line-height: 50px;
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		color: @verde-2;
+		margin-bottom: 32px;
+	}
+	&__contents{
+		max-width: 740px;
+		&--thankyou{
+			text-align: center;
+			p, h1, h2, h3, h4, h5, h6{
+				font-weight: @bold !important;
+				margin: 0;
+			}
+			img{
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	h1{
+		font-size: @font-size-h1;
+		margin-bottom: 0;
+	}
+	p{
+		font-size: 35px;
+		line-height: 42px;
+		margin-bottom: 20px;
+		display: block;
+		font-weight: @light;
+	}
+	em{
+		display: block;
+		font-style: normal;
+		font-size: 64px;
+		line-height: 64px;
+		margin: 10px 0;
+		font-weight: @regular;
+	}
+	small{
+		display: block;
+		font-size: 16px;
+		font-weight: @regular;
+	}
+	.o-btn{
+		text-align: center;
+		display: inline-block;
+		min-width: 176px;
+		margin: 24px 0;
+	}
+}

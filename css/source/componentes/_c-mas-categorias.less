@@ -1,0 +1,151 @@
+.c-mas-categorias{
+	padding: 45px 0;
+
+	.media(TabletPortrait, {
+		padding: 90px 0;
+	});
+
+	h2{
+		font: @medium 48px/50px @tipografia-principal;
+		text-align: center;
+		margin: 0 0 80px 0;
+		color: @negro;
+	}
+
+	ul{
+		width: 100%;
+		max-width: 1208px;
+		margin: auto;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		gap: 40px;
+		flex-wrap: wrap;
+	}
+
+	li{
+		width: 100%;
+
+		.media(Mobile, {
+			width: calc(50% - 20px);
+		});
+
+		.media(Tablet, {
+			width: calc(33% - 26.6px);
+		});
+
+		.media(TabletPortrait, {
+			width: calc(25% - 30px);
+		});
+	}
+
+	a{
+		background: @blanco;
+		box-shadow: 0 2px 5px #00000002;
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		padding: 16px;
+		transition: all 0.5s ease-in;
+
+		&:hover{
+			text-decoration: none;
+			transform: translateY(-3px);
+
+			strong{
+				color: @verde-2;
+			}
+
+			img{
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	strong{
+		width: calc(100% - 75px);
+		font: @medium 16px/22px @tipografia-principal;
+		color: @negro;
+		transition: all 0.5s ease-in;
+	}
+
+	&__contenido{
+		padding: 45px 20px;
+		background: #F6F6F6;
+
+		.media(TabletPortrait, {
+			padding: 70px 40px 110px 40px;
+		});
+	}
+
+	&__imagen{
+		height: 56px;
+		width: 56px;
+		display: block;
+		border-radius: 50%;
+		overflow: hidden;
+		position: relative;
+		margin: 0 19px 0 0;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transition: all 0.5s ease-in;
+		}
+	}
+
+	&--get-inspired{
+		padding: 0 0 48px 0;
+		background: #fafafa;
+
+		h1, h2, h3, h4, h5, h6{
+			color: @negro;
+			font: @bold 48px/50px @tipografia-principal;
+			margin: 0 0 27px 0;
+			text-align: left;
+		}
+
+		ul{
+			min-width: 1225px;
+			width: 100%;
+			max-width: none;
+			margin: 0;
+			display: flex;
+			gap: 32px;
+			flex-wrap: wrap;
+		}
+
+		li{
+			width: calc(20% - 27px);
+		}
+
+		a{
+			&.is-active{
+				background: @verde-2;
+
+				strong{
+					color: @blanco;
+				}
+
+				&:hover{
+					transform: none;
+
+					img{
+						transform: none;
+					}
+				}
+			}
+		}
+	}
+
+	&--get-inspired &{
+		&__menu{
+			width: 100%;
+			overflow-y: auto;
+		}
+	}
+}

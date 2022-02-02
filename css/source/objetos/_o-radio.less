@@ -1,0 +1,70 @@
+.o-radio{
+	display: flex;
+
+	input{
+		position: absolute;
+		visibility: hidden;
+
+		& + span{
+			padding-left: 40px;
+			position: relative;
+			font: medium 14px/14px @tipografia-principal;
+			color: @negro;
+			padding-top: 3px;
+
+			&:before{
+				box-sizing: border-box;
+				left: 0;
+				top: 0;
+				content: '';
+				display: block;
+				position: absolute;
+				height: 24px;
+				width: 24px;
+				border: 2px solid @gris-4;
+				border-radius: 50%;
+				transition: all 0.5s ease-in;
+			}
+
+			&:after{
+				box-sizing: border-box;
+				left: 6px;
+				top: 6px;
+				content: '';
+				display: block;
+				position: absolute;
+				height: 12px;
+				width: 12px;
+				border-radius: 50%;
+				background: @negro;
+				border: 2px solid @negro;
+				border-left: none;
+				border-top: none;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.5s ease-in;
+			}
+		}
+
+		&:focus{
+			& + span{
+				&:before{
+					border: 2px solid @negro;
+				}
+			}
+		}
+
+		&:checked{
+			& + span{
+				&:before{
+					border: 2px solid @negro;
+				}
+
+				&:after{
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

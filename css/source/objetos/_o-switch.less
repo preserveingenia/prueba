@@ -1,0 +1,61 @@
+.o-switch{
+	display: flex;
+
+	input{
+		position: absolute;
+		visibility: hidden;
+
+		& + span{
+			padding-left: 60px;
+			position: relative;
+			font: medium 14px/14px @tipografia-principal;
+			color: @negro;
+			padding-top: 3px;
+
+			&:before{
+				box-sizing: border-box;
+				left: 0;
+				top: 0;
+				content: '';
+				display: block;
+				position: absolute;
+				height: 24px;
+				width: 44px;
+				background: @gris-6;
+				border-radius: 24px;
+				border: 2px solid @gris-6;
+				transition: all 0.5s ease-in;
+			}
+
+			&:after{
+				box-sizing: border-box;
+				left: 2px;
+				top: 2px;
+				content: '';
+				display: block;
+				position: absolute;
+				height: 20px;
+				width: 20px;
+				border-radius: 50%;
+				background: @blanco;
+				border-left: none;
+				border-top: none;
+				transform: rotate(45deg);
+				transition: all 0.5s ease-in;
+			}
+		}
+
+		&:checked{
+			& + span{
+				&:before{
+					background: @verde-3;
+					border: 2px solid @verde-3;
+				}
+
+				&:after{
+					left: 22px;
+				}
+			}
+		}
+	}
+}

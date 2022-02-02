@@ -1,0 +1,122 @@
+.o-btn{
+	background: @verde-2;
+	border-radius: 5px;
+	border: 1px solid @verde-2;
+	color: @blanco !important;
+	cursor: pointer;
+	display: inline-block;
+	font: @medium 15px/21px @tipografia-principal;
+	padding: 12.5px 15px;
+	transition: 0.5s all ease;
+	min-width: 125px;
+	text-align: center;
+
+	&:hover{
+		text-decoration: none;
+		background: @verde-1;
+		color: @blanco !important;
+		border-color: @verde-1;
+	}
+
+	&--icon{
+		span{
+			margin-right: 8px;
+		}
+	}
+
+	&--rounded{
+		border-radius: 24px;
+	}
+
+	&--border{
+		background: @blanco;
+		color: @verde-1 !important;
+
+		&:hover{
+			background: @blanco;
+			color: @verde-2;
+		}
+	}
+
+	&--negro{
+		background: @negro;
+		color: @blanco;
+		border: 1px solid @negro;
+
+		&:hover{
+			background: @gris-1;
+			border: 1px solid @gris-1;
+		}
+	}
+
+	&--blanco{
+		background: @blanco;
+		color: @negro !important;
+		border: 1px solid @blanco;
+
+		&:hover{
+			background: @verde-2;
+			border: 1px solid @verde-2;
+			text-decoration: none;
+			color: @blanco !important;
+		}
+	}
+
+	&--border&{
+		&--negro{
+			border: 1px solid @negro;
+			background: @blanco;
+			color: @negro !important;
+
+			&:hover{
+				border: 1px solid @gris-1;
+				color: @gris-1;
+			}
+		}
+	}
+
+	&--descarga{
+		border: 1px solid #E8E7E7;
+		background: @blanco;
+		color: @negro !important;
+		display: inline-flex;
+		align-items: center;
+		height: 79px;
+		padding: 0 0 0 16px;
+
+		span{
+			color: @negro;
+			font-size: 24px;
+			margin: 0 0 0 32px;
+			transition: all 0.5s ease-in;
+		}
+
+		strong{
+			color: @verde-2;
+			background: #E8E7E7;
+			height: 77px;
+			width: 120px;
+			font-size: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 0 0 32px;
+			border-radius: 0 3px 3px 0;
+			transition: all 0.5s ease-in;
+		}
+
+		&:hover{
+			background: @blanco;
+			color: @verde-2 !important;
+
+			span{
+				color: @verde-2 !important;
+			}
+
+			strong{
+				background: @verde-2;
+				color: @blanco;
+			}
+		}
+	}
+}
